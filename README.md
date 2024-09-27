@@ -39,7 +39,7 @@ cd ABCall-experimento-2
 
 **Instalar dependencias**: Se deben instalar las dependencias encontradas en requirements.txt.
 
-  - En **Linux/macOS**:
+  - En **Linux/macOS/Windows**:
     ```bash
     pip install -r requirements.txt
     ```
