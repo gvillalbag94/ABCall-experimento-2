@@ -27,7 +27,7 @@ cd ABCall-experimento-2
   - En **Windows**:
     ```bash
     py -m venv .venv
-    venv\Scripts\activate
+    .\.venv\Scripts\activate
     ```
 
   - En **Linux/macOS**:
