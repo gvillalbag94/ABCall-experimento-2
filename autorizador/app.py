@@ -9,9 +9,11 @@ app = create_app('default')
 app_context = app.app_context()
 app_context.push()
 
+# Clave secreta para firmar el JWT
 SECRET_KEY = app.config['JWT_SECRET_KEY']
 ALGORITHM = app.config['ALGORITHM']
 
+# Usuario simulado (en una aplicación real, validarías las credenciales contra una base de datos)
 users = {
     'user1': '1234'
 }
@@ -26,6 +28,7 @@ def validate_user():
     username = user_data.get('username')
     password = user_data.get('password')
 
+    # Validar las credenciales (simulación)
     if username in users and users[username] == password:
         # Generar JWT
         token = jwt.encode({
@@ -45,8 +48,12 @@ def validate_token():
     token_recibido = request.get_json()
     token = None
     if token_recibido:
+        # El token suele venir en formato "Bearer <token>", extraemos el token
         token = token_recibido.split(' ')[1]
+    # Guardar el token en una variable
     token_guardado = token
+    # Puedes decodificar el token aquí si lo necesitas
+    # Por ejemplo:
     try:
         payload = jwt.decode(token_guardado, SECRET_KEY, algorithms=[ALGORITHM])
         return jsonify({'mensaje': 'Token válido', 'payload': payload}), 200
