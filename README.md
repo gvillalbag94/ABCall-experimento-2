@@ -12,7 +12,17 @@ Antes de empezar, asegúrate de tener instalados los siguientes requisitos:
 
 - **Python 3.x**: Si no lo tienes instalado, puedes descargarlo desde la [página oficial de Python](https://www.python.org/downloads/).
 
-- **Entorno Virtual**: Es recomendable crear un entorno virtual para aislar las dependencias del proyecto.
+## Instalación
+
+### Paso 1: Clonar el repositorio
+
+```bash
+git clone https://github.com/gvillalbag94/ABCall-experimento-2.git
+cd ABCall-experimento-2
+```
+
+### Paso 2: Crear Entorno Virtual
+**Entorno Virtual**: Es recomendable crear un entorno virtual para aislar las dependencias del proyecto.
 
   - En **Windows**:
     ```bash
@@ -26,16 +36,7 @@ Antes de empezar, asegúrate de tener instalados los siguientes requisitos:
     source venv/bin/activate
     ```
 
-## Instalación
-
-### Paso 1: Clonar el repositorio
-
-```bash
-git clone https://github.com/gvillalbag94/ABCall-experimento-2.git
-cd ABCall-experimento-2
-```
-
-### Paso 2: Instalar dependencias
+### Paso 3: Instalar dependencias
 
 **Instalar dependencias**: Se deben instalar las dependencias encontradas en requirements.txt.
 
@@ -44,7 +45,7 @@ cd ABCall-experimento-2
     pip install -r requirements.txt
     ```
 
-### Paso 3: Ejecucion de componentes
+### Paso 4: Ejecucion de componentes
 
 **Iniciar Api Gateway**: Este comando empezara a ejecutar el Api Gateway el cual recibira las peticiones. ¡¡Recuerde estar en la raiz del proyecto!!
 
