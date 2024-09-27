@@ -46,7 +46,21 @@ def login():
 def consulta_incidentes():
     auth_header = request.headers.get('Authorization')
     if validar_token(auth_header) == True:
-        return "Consulta realizada correctamente", 200
+        incidentes = [
+            {
+                "id": 1,
+                "tipo": "Queja",
+                "descripcion": "Mala experiencia con el soporte técnico.",
+                "estado": "Resuelto"
+            },
+            {
+                "id": 2,
+                "tipo": "Consulta",
+                "descripcion": "Información sobre la garantía del producto.",
+                "estado": "Cerrado"
+            }
+        ]
+        return incidentes, 200
     else:
         return validar_token(auth_header)
 
